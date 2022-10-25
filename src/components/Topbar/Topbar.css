@@ -1,0 +1,22 @@
+.dropdown-div {
+  position: absolute;
+  transform: translate3d(0px, 25px, 0px);
+  top: 0px;
+  left: 0px;
+  will-change: transform;
+  list-style: none;
+  background-clip: padding-box;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
