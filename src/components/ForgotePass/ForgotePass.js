@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthConntext";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const Signup = () => {
+const ForgotePass = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,9 +19,7 @@ const Signup = () => {
 
     // Do validation
     if (password !== confirmPassword) {
-      setError("Password didn't Match !");
-      toast.error(error);
-      return;
+      return setError("Password don't match!");
     }
 
     try {
@@ -35,7 +31,6 @@ const Signup = () => {
     } catch (error) {
       setLoading(false);
       setError("Faild to create an account");
-      toast.error(error);
     }
   }
 
@@ -103,6 +98,12 @@ const Signup = () => {
                 Sign in
               </button>
 
+              {error && (
+                <p className="text-md pt-2 text-red-600 font-semibold">
+                  {error}
+                </p>
+              )}
+
               <div className="flex justify-between items-center mt-6">
                 Already have an Account ?
                 <Link
@@ -116,9 +117,8 @@ const Signup = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </section>
   );
 };
 
-export default Signup;
+export default ForgotePass;

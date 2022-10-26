@@ -1,8 +1,10 @@
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -56,11 +58,21 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
+  // Signup with google
+  const signUpWithGoogle = () => {
+    const auth = getAuth();
+    const provider = GoogleAuthProvider();
+
+    return signInWithPopup(auth, provider);
+  };
+
   const value = {
     currentUser,
     login,
     signup,
     logout,
+    signUpWithGoogle,
+    loading,
   };
 
   return (
