@@ -7,6 +7,8 @@ import Signup from "./components/Signup/Signup";
 import ForgotePass from "./components/ForgotePass/ForgotePass";
 import PrivateRoute from "./components/Routes/PrivateRoute";
 import PublicRoute from "./components/Routes/PublicRoute";
+import LocalStorage from "./components/LocalStorage/LocalStorage";
+import TailwindColumn from "./components/TailwindColumn/TailwindColumn";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         }
       >
         <Route index element={<Home />} />
+        <Route path="/tailwindcolumn" element={<TailwindColumn />} />
+        <Route path="/localstorage" element={<LocalStorage />} />
       </Route>
       <Route
         path="/login"

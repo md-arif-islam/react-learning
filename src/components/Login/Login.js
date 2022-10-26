@@ -32,10 +32,10 @@ const Login = () => {
     }
   }
 
-  function handleSubmitWithGoogle(e) {
+  const handleSubmitWithGoogle = async (e) => {
     e.preventDefault();
 
-    signUpWithGoogle()
+    await signUpWithGoogle()
       .then((result) => {
         const user = result.user;
         console.log(user);
@@ -45,7 +45,7 @@ const Login = () => {
         console.error(error);
         setError(error);
       });
-  }
+  };
 
   return (
     <section className="h-screen w-full mx-auto">
@@ -115,7 +115,7 @@ const Login = () => {
                 <p className="text-center font-semibold mx-4 mb-0">OR</p>
               </div>
 
-              <a
+              <button
                 className="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                 style={{ backgroundColor: "#3b5998" }}
                 role="button"
@@ -134,7 +134,7 @@ const Login = () => {
                   />
                 </svg>
                 Continue with Google
-              </a>
+              </button>
 
               <a
                 className="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"

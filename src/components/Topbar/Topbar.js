@@ -11,7 +11,7 @@ const Topbar = () => {
 
   return currentUser ? (
     <>
-      <div className="absolute w-auto top-0 h-[100px] flex items-center justify-between left-[300px] right-0 z-10 shadow-md  bg-white">
+      <div className="fixed w-auto top-0 h-[100px] flex items-center justify-between left-[300px] right-0 z-10 shadow-md  bg-white">
         <div className="float-left flex flex-row items-center pl-4">
           <span className="text-2xl font-bold">DashBoard</span>
         </div>
@@ -58,14 +58,7 @@ const Topbar = () => {
                       Dashboard
                     </a>
                   </li>
-                  <li>
-                    <a
-                      className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:text-blue-600"
-                      href="#"
-                    >
-                      Profile
-                    </a>
-                  </li>
+
                   <li>
                     <Link
                       className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:text-blue-600"

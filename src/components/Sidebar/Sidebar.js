@@ -2,14 +2,22 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="absolute top-0 bottom-0 left-0 w-[300px] bg-gradient-to-b from-blue-600 to-blue-900 px-10 py-5">
+    <div className="fixed top-0 bottom-0 left-0 w-[300px] bg-gradient-to-b from-blue-600 to-blue-900 px-10 py-5">
       <ul className="list-none">
         <h3 className="text-3xl font-semibold text-white mb-8">
           <i className="fas fa-laugh-wink"></i> React JS
         </h3>
         <li className="p-1">
           <a
-            href="/portfolio"
+            href="/tailwindcolumn"
+            className="font-semibold text-white hover:text-orange-400 text-lg"
+          >
+            <i className="fas fa-tachometer-alt"></i>Tailwind Column
+          </a>
+        </li>
+        <li className="p-1">
+          <a
+            href="/localstorage"
             className="font-semibold text-white hover:text-orange-400 text-lg"
           >
             <i className="fas fa-tachometer-alt"></i>Local Storage

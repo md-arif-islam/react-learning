@@ -22,8 +22,10 @@
 }
 
 .page {
-  padding-left: 320px;
-  padding-top: 120px;
-  width: 100%;
-  background-color: aqua;
+  position: absolute;
+  left: 300px;
+  top: 100px;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
 }

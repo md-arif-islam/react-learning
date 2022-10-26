@@ -61,7 +61,7 @@ export function AuthProvider({ children }) {
   // Signup with google
   const signUpWithGoogle = () => {
     const auth = getAuth();
-    const provider = GoogleAuthProvider();
+    const provider = new GoogleAuthProvider();
 
     return signInWithPopup(auth, provider);
   };
